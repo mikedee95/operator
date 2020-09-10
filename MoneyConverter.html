@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Amount</td>
+        <td></td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+    </tr>
+    <tr>
+        <td><label><input type="text" id="inputvalue"></label></td>
+        <td></td>
+        <td><label><select id="usd">
+            <option value="1">USD</option>
+            <option value="23000">VND</option>
+        </select></label>
+        </td>
+        <td><label><select id="vnd">
+            <option value="23000">VND</option>
+            <option value="1">USD</option>
+        </select></label>
+        </td>
+    </tr>
+</table>
+<button type="button" onclick="convert()">Convert</button>
+<p id="result">Result:</p>
+</body>
+<script>function convert(){
+    let a = document.getElementById("inputvalue").value
+    let b = document.getElementById("usd").value
+    let c = document.getElementById("vnd").value
+    let ketqua = a*c/b
+    document.getElementById("result").innerHTML = "Result:" + ketqua
+}
+</script>
+</html>
